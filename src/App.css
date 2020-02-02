@@ -123,10 +123,10 @@ h6 {
   padding: 1rem 0;
   color: var(--mainBlack);
   transition: var(--mainTransition);
-  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
+  text-align: center;
 }
 .nav-links a:hover {
   color: var(--primaryColor);
