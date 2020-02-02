@@ -13,7 +13,7 @@ export default class Services extends Component {
             {
                 icon: <FaSwimmingPool/> ,
                 title: 'Pool Decks and Cabanas',
-                info: 'Your ultimate pool day awaits with a renovated pool deck situated over two acres.  The newly renovated deck includes four large pools, three of them infinity.  A splash pad, in pool ledge loungers, and daybeds in the center of the pools combine to create a contemporary, luxurious oasis.  Enjoy the heated pools all winter long.'
+                info: 'Your ultimate pool day awaits with a renovated pool deck situated over two acres.  The newly renovated deck includes four large pools, three of them infinity.  A splash pad, in pool ledge loungers, and daybeds in the center of the pools combine to create a contemporary, luxurious oasis.'
             },
             {
                 icon: <FaWifi/>,
