@@ -29,15 +29,47 @@ export default class SingleRoom extends Component {
             </div>
             )
         }
-        const {name,description,capacity,size,price, extras, breakfast, pets, images} = room
+        const {name,
+            description,
+            capacity,
+            size,
+            price, 
+            extras, 
+            buffet, 
+            smoking, 
+            images} = room
+        const [mainImg,...defaultImg] = images
         return (
-            <StyledHero img={images[0] || this.state.defaultBCG}>
+            <>
+            <StyledHero img={mainImg || this.state.defaultBCG}>
                 <Banner title={`${name} room`}>
                     <Link to='/rooms' className='btn-primary'>
                         Back to Rooms
                     </Link>
                 </Banner>
             </StyledHero>
+            <section className='single-room'>
+                <div className='single-room-images'>
+                    {defaultImg.map((img, index)=>{
+                        return <img key={index} src={img} alt={name}/>
+                    })}
+                </div>
+                <div className='single-room-info'>
+                    <article className='desc'>
+                        <h3>details</h3>
+                        <p>{description}</p>
+                    </article>
+                    <article className='info'>
+                        <h3>info</h3>
+                        <h6>price: ${price}</h6>
+                        <h6>size : {size} square footage</h6>
+                        <h6>capacity: {capacity > 1? `${capacity} people`: `${capacity} person`}</h6>
+                        <h6>{smoking? 'smoking allowed': 'no smoking allowed'}</h6>
+                        <h6>{buffet && 'complimentary buffet at Grand Lux Cafe'}</h6>
+                    </article>
+                </div>
+            </section>
+            </>
         )
     }
 }
