@@ -1,9 +1,23 @@
 import React from 'react'
+import Room from './Room'
 
-export default function RoomsList() {
+const RoomsList = ({rooms}) => {
+if(rooms.length === 0){
     return (
-        <div>
-            hello from rooms list
+        <div className='empty-search'>
+            <h3>no room matches found</h3>
         </div>
     )
 }
+return (
+    <section className="roomslist">
+      <div className="roomslist-center">
+        {rooms.map(item => {
+          return <Room key={item.id} room={item} />;
+        })}
+      </div>
+    </section>
+  );
+}
+
+export default RoomsList

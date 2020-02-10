@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import defaultBCG from '../images/details-3.jpg'
+import defaultImg from '../images/details-3.jpg'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
@@ -11,7 +11,7 @@ export default class SingleRoom extends Component {
         super(props)
         this.state = {
             slug: this.props.match.params.slug,
-            defaultBCG: defaultBCG
+            defaultImg: defaultImg
         }
     }
 

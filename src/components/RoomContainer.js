@@ -11,11 +11,10 @@ function RoomContainer({context}){
         return <Loading/>
     }
     return (
-    <div>
-        Hello from room container
+    <>
         <RoomFilter rooms={rooms}/>
         <RoomsList rooms={sortedRooms}/>
-    </div>
+    </>
     )
 }
 export default withRoomConsumer(RoomContainer)
