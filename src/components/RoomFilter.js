@@ -64,11 +64,11 @@ export default function RoomFilter({rooms}) {
                 {/*extras checkbox*/}
                 <div className='form-group'>
                     <div className='single-extra'>
-                        <input type='checkbox' name='smoking' id='smoking' checked={smoking} onChange={handleChange}></input>
+                        <input type='checkbox' name='smoking' checked={smoking} onChange={handleChange}></input>
                         <label htmlFor='smoking'>smoking</label>
                     </div>
                     <div className='single-extra'>
-                        <input type='checkbox' name='buffet' id='buffet' checked={buffet} onChange={handleChange}></input>
+                        <input type='checkbox' name='buffet' checked={buffet} onChange={handleChange}></input>
                         <label htmlFor='buffet'>buffet</label>
                     </div>
                 </div>
