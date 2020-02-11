@@ -3,7 +3,7 @@ import {useContext} from 'react'
 import {RoomContext} from '../Context'
 import Title from '../components/Title'
 
-//get all unique values for select menu from array using Set
+//get all unique values for filter menus from array using Set
 const getUnique = (rooms, value)=>{
     return [...new Set(rooms.map(room => room[value]))]
 }
