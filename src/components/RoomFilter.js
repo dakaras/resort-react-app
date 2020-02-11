@@ -9,7 +9,7 @@ const getUnique = (rooms, value)=>{
 }
 export default function RoomFilter({rooms}) {
     const context = useContext(RoomContext)
-    const {handleChange, type, capacity, price, minPrice, maxPriceminSize, maxSize, smoking, buffet} = context
+    const {handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, smoking, buffet} = context
     
     //get unique room types
     let types = getUnique(rooms, 'type')
@@ -46,6 +46,21 @@ export default function RoomFilter({rooms}) {
                         </select>
                     </div>
                 {/*end of select capacity*/}
+                {/*room price range*/}
+                    <div className='form-group'>
+                        <label htmlFor='price'>room price ${price}</label>
+                        <input type='range' name='price' min={minPrice} max={maxPrice} id='price' value={price} onChange={handleChange} className='form-control'></input>
+                    </div>
+                {/*end of room price range */}
+                {/*room size inputs */}
+                <div className='form-group'>
+                    <label htmlFor='size'>room size</label>
+                    <div className='size-inputs'>
+                        <input type='number' name='minSize' min={minSize} id='size' value={minSize} onChange={handleChange} className='size-input'></input>
+                        <input type='number' name='maxSize' min={maxSize} id='size' value={maxSize} onChange={handleChange} className='size-input'></input>
+                    </div>
+                </div>
+                {/*end of room size inputs */}
             </form>
         </section>
     )
