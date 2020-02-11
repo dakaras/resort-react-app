@@ -24,7 +24,8 @@ state = {
 getData = async () => {
 try {
     let response = await Client.getEntries({
-    content_type: "reactResortRooms"
+    content_type: "reactResortRooms",
+    order: 'sys.createdAt'
     });
     let rooms = this.formatData(response.items);
 
@@ -49,7 +50,7 @@ try {
 
 componentDidMount() {
     this.getData()
-    
+
 }
 
 formatData(items) {
